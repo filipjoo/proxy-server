@@ -26,6 +26,7 @@ app.use("/corona-tracker-world-data", limiter, (req, res, next) => {
 })
 
 app.use("/wether-data", limiter, (req, res, next) => {
+    console.log(`Listening on port ${port}`)
     createProxyMiddleware({
         target: "${process.env.BASE_API_URL_WEATHERAPI}${city}&api=no",
         changeOrigin: true,
