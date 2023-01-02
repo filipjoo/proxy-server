@@ -37,6 +37,7 @@ app.use("/weather-data", (req, res, next) => {
         },
     })(req, res, next)
 })
+
 app.use("/corona-tracker-world-data", (req, res, next) => {
     createProxyMiddleware({
         target: process.env.BASE_API_URL_CORONA_WORLD,
